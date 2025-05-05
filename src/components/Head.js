@@ -2,13 +2,22 @@ import React from "react";
 import hamburgerIcon from "../assets/header/hamburger-menu.png";
 import youtubeLogo from "../assets/header/youtube-logo.jpg";
 import userIcon from "../assets/header/user-icon.png";
+import { useDispatch } from "react-redux";
+import { toggleMenu } from "./utils/appSlice";
 
 const Head = () => {
+  const dispatch = useDispatch();
+
+  const toggleMenuHandler = () => {
+    dispatch(toggleMenu());
+  };
+
   return (
     <header className="flex items-center justify-between px-4 py-2 shadow-md bg-white">
       {/* Left section: hamburger + logo */}
       <div className="flex items-center gap-4">
         <img
+          onClick={() => toggleMenuHandler()}
           src={hamburgerIcon}
           alt="hamburger-menu"
           className="w-6 h-6 cursor-pointer"

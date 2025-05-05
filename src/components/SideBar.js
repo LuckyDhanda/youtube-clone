@@ -1,6 +1,13 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 const SideBar = () => {
+  const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
+
+  // early return method
+  if (!isMenuOpen) {
+    return null;
+  }
   return (
     <div className="p-4 w-64 bg-white shadow-md h-screen overflow-y-auto border-r ">
       {/* Primary Menu */}
