@@ -4,6 +4,10 @@ This project is a simplified YouTube-like web application built with React, Redu
 
 ---
 
+## Check out the live version of the YouTube Clone here:
+
+https://youtube-clone-mauve-zeta.vercel.app/
+
 ## Features
 
 - Home page displaying the most popular videos
