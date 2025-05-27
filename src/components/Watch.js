@@ -4,6 +4,7 @@ import { useSearchParams } from "react-router-dom";
 import { closeMenu } from "../utils/appSlice";
 import CommentsContainer from "./CommentsContainer";
 import { FiThumbsUp, FiThumbsDown, FiShare2, FiDownload } from "react-icons/fi";
+import RelatedVideos from "./RelatedVideos";
 
 const Watch = () => {
   const dispatch = useDispatch();
@@ -169,7 +170,8 @@ const Watch = () => {
         </div>
 
         {/* Right Side: Recommendations */}
-        {/* ... */}
+
+        <RelatedVideos />
       </div>
     </div>
   );
