@@ -14,10 +14,12 @@ const ButtonList = () => {
     "Java",
     "History",
     "Recently Watched",
+    "Popular",
+    "Trending",
   ];
 
   return (
-    <div className="flex flex-wrap">
+    <div className="flex flex-wrap font-bold text-sm">
       {list.map((category, index) => (
         <CategoryButton key={index} name={category} />
       ))}
